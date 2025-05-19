@@ -52,7 +52,7 @@ pipeline {                                    // 1  // Defines the start of the 
                 script {                      // 16  // Allows running custom Groovy script inside the pipeline
                     echo '<--------------- Jar Publish Started --------------->'  
                                               // Logs a message indicating the start of JAR publishing
-                    def server = Artifactory.newServer url: registry + "/artifactory", credentialsId: "artifact-cred"  
+                    def server = Artifactory.newServer url: registry + "/artifactory", credentialsId: "artifact-creds"  
                                               // Defines the Artifactory server with the specified URL and credentials
                     def properties = "buildid=${env.BUILD_ID},commitid=${GIT_COMMIT}"  
                                               // Sets properties like build ID and Git commit ID for the build
